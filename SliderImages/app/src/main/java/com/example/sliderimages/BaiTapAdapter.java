@@ -28,7 +28,7 @@ public class BaiTapAdapter extends PagerAdapter {
         Glide.with(view.getContext())
                 .load(images.getAvatar())
                 .into(imageView);
-        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+
 
         // Add view
         container.addView(view);

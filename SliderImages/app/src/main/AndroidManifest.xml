@@ -24,7 +24,7 @@
             android:name=".ViewPager2AndIndicator3Activity"
             android:exported="false" />
         <activity
-            android:name=".BaiTapActivity"
+            android:name=".ViewPagerAndIndicatorActivity"
             android:exported="false" />
         <activity
             android:name=".ViewFlipperActivity"
@@ -33,7 +33,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewPagerAndIndicatorActivity"
+            android:name=".BaiTapActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

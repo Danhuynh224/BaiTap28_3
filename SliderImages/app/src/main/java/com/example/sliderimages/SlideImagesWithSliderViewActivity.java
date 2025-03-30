@@ -1,5 +1,6 @@
 package com.example.sliderimages;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -8,7 +9,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderView;
+
+import java.util.ArrayList;
+
 public class SlideImagesWithSliderViewActivity extends AppCompatActivity {
+
+    private SliderView sliderView;
+    private ArrayList<Integer> arrayList;
+    private SliderAdapter sliderAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +30,24 @@ public class SlideImagesWithSliderViewActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        sliderView = findViewById(R.id.imageSlider);
+        arrayList = new ArrayList<>();
+
+        // Thêm ảnh vào danh sách
+        arrayList.add(R.drawable.coffee);
+        arrayList.add(R.drawable.companypizza);
+        arrayList.add(R.drawable.quangcao);
+
+        sliderAdapter = new SliderAdapter(getApplicationContext(), arrayList);
+        sliderView.setSliderAdapter(sliderAdapter);
+
+        // Cấu hình sliderView
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_RIGHT);
+        sliderView.setIndicatorSelectedColor(getResources().getColor(R.color.red));
+        sliderView.setIndicatorUnselectedColor(Color.GRAY);
+        sliderView.startAutoCycle();
+        sliderView.setScrollTimeInSec(5);
     }
 }

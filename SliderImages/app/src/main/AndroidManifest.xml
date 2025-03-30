@@ -18,7 +18,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".SlideImagesWithSliderViewActivity"
+            android:name=".BaiTapActivity"
             android:exported="false" />
         <activity
             android:name=".ViewPager2AndIndicator3Activity"
@@ -33,7 +33,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".BaiTapActivity"
+            android:name=".SlideImagesWithSliderViewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

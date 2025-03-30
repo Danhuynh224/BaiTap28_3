@@ -40,7 +40,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.circleindicator)
     implementation(libs.retrofit)
-//    implementation(libs.autoimageslider)
+    implementation ("com.github.smarteist:Android-Image-Slider:1.4.0")
     implementation(libs.converter)
     implementation(libs.gson)
     testImplementation(libs.junit)
